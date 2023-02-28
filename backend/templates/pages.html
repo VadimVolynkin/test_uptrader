@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>Все станицы</h1>
+    {% for page in pages %}
+        <li><a href="{% url 'menu:page_detail' page.slug %}">{{ page.name }}</a></li>
+    {% endfor %}
+{% endblock %}
+
+

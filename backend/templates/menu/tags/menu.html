@@ -1,0 +1,8 @@
+<div>
+    <ul>
+        {% for item in menu %}
+            <li><a class="dropdown-item {% if request.build_absolute_uri == item.url %}active{% endif %}" href="{{ item.url }}">{{ item.name }}</a></li>
+        {% endfor %}
+    </ul>
+</div>
+

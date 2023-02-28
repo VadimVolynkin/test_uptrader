@@ -1,0 +1,29 @@
+{% load menu_tag %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Тестовое UpTrader</h1>
+    <p>Все задания выполнены. Спасибо за интересое тестовое задание. Буду рад знакомству и фидбеку.
+    <p>Фронт я не cделал.</p>
+
+    <h2>Реальное меню</h2>
+        <ul>
+            <li><a href="{% url 'main_page' %}">Главная</a></li>
+            <li><a href="{% url 'menu:page_list' %}">Все страницы</a></li>
+        </ul>
+    </div>
+
+    <h2>Main Menu</h2>
+    {% get_menu 'main_menu' %}
+
+    {% block content %}
+    {% endblock %}
+</body>
+</html>
